@@ -5,6 +5,7 @@ end
 
 # Define your WIN_COMBINATIONS const
 WIN_COMBINATIONS = [
+  [0,1,2],
   [3,4,5],
   [6,7,8],
   [0,3,6],
@@ -18,13 +19,15 @@ def won?(board)
   if(!board.include?("O") || !board.include?("X"))
     return false
   else
-    WIN_COMBINATIONS.each do |win_combo|
-      if (board[win_combo[0]] == "X") && (board[win_combo[1]] == "X") && (board[win_combo[2]] == "X")
-        return win_combo
-      elsif ((board[win_combo[0]] == "O") && (board[win_combo[1]] == "O") && (board[win_combo[2]] == "O"))
-        return win_combo
-      else
-        return false
+    WIN_COMBINATIONS.each do |win_combos|
+      win_combos.each do |win_combo|
+        if (board[win_combo[0]] == "X") && (board[win_combo[1]] == "X") && (board[win_combo[2]] == "X")
+          return win_combo
+        elsif ((board[win_combo[0]] == "O") && (board[win_combo[1]] == "O") && (board[win_combo[2]] == "O"))
+          return win_combo
+        else
+          return false
+        end
       end
     end
   end
