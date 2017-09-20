@@ -49,3 +49,11 @@ def over?(board)
     false
   end
 end
+
+def winner(board)
+  win_combo = won?(board)
+  if win_combo.any?{|i| i == "X"}
+    "X"
+  elsif win_combo.any? {|i| i == "O"}
+    "O"
+end
