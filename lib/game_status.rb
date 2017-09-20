@@ -15,7 +15,7 @@ WIN_COMBINATIONS = [
   [2,4,6]
 ]
 
-def won?(board = ["O", " ", " ", " ", " ", " ", " ", " ", " "])
+def won?(board = [" ", " ", " ", " ", " ", " ", " ", " ", " "])
   if(!board.include?("O") || !board.include?("X"))
     return false
   else
@@ -32,4 +32,4 @@ def won?(board = ["O", " ", " ", " ", " ", " ", " ", " ", " "])
   end
 end
 
-won?()
+won?(["X", "O", "X", "O", "X", "X", "O", "X", "O"])
