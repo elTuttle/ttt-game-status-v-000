@@ -16,8 +16,14 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.each do |win_combos|
-    win_combos.detect{|i|}
+  if(!board.include("O") || !board.include("X"))
+    return false
+  else
+    WIN_COMBINATIONS.each do |win_combo|
+      /*win_combo.each do |win_index|
+        
+      end*/
+    end
   end
-
+  
 end
