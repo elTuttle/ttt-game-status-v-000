@@ -57,5 +57,7 @@ def winner(board)
     "X"
   elsif board[win_combo[0]] == "O"
     "O"
+  elsif draw?(board) || !full?
+    nil
   end
 end
