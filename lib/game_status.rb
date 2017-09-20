@@ -29,3 +29,7 @@ def won?(board = [" ", " ", " ", " ", " ", " ", " ", " ", " "])
   end
   return false
 end
+
+def full?(board)
+  !board.include?(" ")
+end
