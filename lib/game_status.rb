@@ -51,13 +51,11 @@ def over?(board)
 end
 
 def winner(board)
-  puts win_combo
   win_combo = won?(board)
-  if (board[win_combo[0]] == "X") && (board[win_combo[1]] == "X") && (board[win_combo[2]] == "X")
+  puts win_combo
+  if board[win_combo[0]].any? { |e| e == "X" }
     "X"
-  elsif ((board[win_combo[0]] == "O") && (board[win_combo[1]] == "O") && (board[win_combo[2]] == "O"))
+  elsif board[win_combo[0]].any? { |e| e == "O" }
     "O"
-  elsif !win_combo
-    nil
   end
 end
