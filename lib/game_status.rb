@@ -28,6 +28,7 @@ def won?(board = [" ", " ", " ", " ", " ", " ", " ", " ", " "])
       end
     end
   end
+  return false
 end
 
 won?(["X", "O", "X", "O", "X", "X", "O", "X", "O"])
