@@ -52,11 +52,11 @@ end
 
 def winner(board)
   win_combo = won?(board)
-  if board[win_combo[0]] == "X"
+  if (board[win_combo[0]] == "X") && (board[win_combo[1]] == "X") && (board[win_combo[2]] == "X")
     "X"
-  elsif board[win_combo[0]] == "O"
+  elsif ((board[win_combo[0]] == "O") && (board[win_combo[1]] == "O") && (board[win_combo[2]] == "O"))
     "O"
-  else
+  elsif !win_combo 
     nil
   end
 end
