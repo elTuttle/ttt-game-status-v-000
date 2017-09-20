@@ -59,4 +59,5 @@ def winner(board)
     "O"
   elsif win_combo == false
     return nil
+  end
 end
