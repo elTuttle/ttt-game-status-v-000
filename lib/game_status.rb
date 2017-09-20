@@ -56,4 +56,5 @@ def winner(board)
     "X"
   elsif win_combo.any? {|i| i == "O"}
     "O"
+  end
 end
