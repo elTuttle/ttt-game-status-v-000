@@ -16,14 +16,14 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
+  x_array = []
+  o_array = []
   if(!board.include("O") || !board.include("X"))
     return false
   else
-    WIN_COMBINATIONS.each do |win_combo|
-      /*win_combo.each do |win_index|
-        
-      end*/
+    board.each do |win_combo|
+      
     end
   end
-  
+
 end
