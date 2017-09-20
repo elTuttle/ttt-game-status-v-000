@@ -51,11 +51,7 @@ def over?(board)
 end
 
 def winner(board)
-  win_combo = won?(board)
-  puts win_combo
-  if board[win_combo[0]].any? { |e| e == "X" }
-    "X"
-  elsif board[win_combo[0]].any? { |e| e == "O" }
-    "O"
-  end
+  
 end
+
+puts won?(["X", " ", " ", " ", "X", " ", " ", " ", "X"])
